@@ -1,7 +1,7 @@
 ---
 title: 这是一个模板
 author: cotes
-date: 2022-03-29 18:27:00 +0800
+date: 2000-01-01 00:00:00 +0800
 categories: [模板]
 tags: [博客模板]
 math: true
