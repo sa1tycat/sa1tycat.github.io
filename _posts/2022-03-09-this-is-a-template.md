@@ -5,9 +5,15 @@ date: 2022-03-29 18:27:00 +0800
 categories: [模板]
 tags: [博客模板]
 math: true
+comments: true
 mermaid: true
+typora-root-url: ../../sa1tycat.github.io
 
 ---
+
+
+
+
 
 This post is to show Markdown syntax rendering on [**Chirpy**](https://github.com/cotes2020/jekyll-theme-chirpy/fork), you can also use it as an example of writing. Now, let's start looking at text and typography.
 
