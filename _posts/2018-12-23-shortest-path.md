@@ -278,7 +278,7 @@ int main(){
 
 Ford算法的优化，时间复杂度小于等于 $\mathcal{O}(NE)$（吧？？）
 
-##伪代码：
+## 伪代码：
 ```C++
 void SPFA(int s){
     //初始化
