@@ -22,7 +22,7 @@ typora-root-url: ../../sa1tycat.github.io
 在处理完文档之后，你需要将处理的结果进行输出。
 
 数据范围：$1 \leq n \leq 10^5$
- 
+
 
 ## Input
 
@@ -52,13 +52,13 @@ Wooooo AAAAAKKKKK leEe
 
 检查的时候可以测试一下特殊数据：
 
-| Input     | Output    |
-|:---       |:---        |
-| ` `（空格）|  `-`      |
-| ` a`      |  `-1a`    |
-| ` aa`     |  `-2a`    |
-| ` aab `   |  `-2a1b-` |
-| `aa bb`   |  `2a-2b`  |
+|    Input    |  Output  |
+| :---------: | :------: |
+| ` `（空格） |   `-`    |
+|    ` a`     |  `-1a`   |
+|    ` aa`    |  `-2a`   |
+|   ` aab `   | `-2a1b-` |
+|   `aa bb`   | `2a-2b`  |
 
 # 代码
 
