@@ -1,7 +1,7 @@
 ---
 title: C语言输出格式控制符
 author: saltycat
-date: 2022-04-07 20:51:12 +0800
+date: 2022-04-07 20:51:52 +0800
 categories: []
 tags: []
 math: true
