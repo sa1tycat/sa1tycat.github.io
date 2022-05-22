@@ -160,7 +160,6 @@ int a=3,b=2;
 
 主调函数：
 
-{: file='main.cpp'}
 
 ``` c++
 #include<cstdio>
@@ -171,12 +170,12 @@ int main(){
     return 0;
 }
 ```
-
 {: file='main.cpp'}
+
 
 被调函数：
 
-{: file='extern.cpp'}
+
 
 ``` c++
 #include<cstdio>
@@ -185,6 +184,7 @@ int f(int n){
     return n==1?f(n-1)*n;
 }
 ```
+{: file='extern.cpp'}
 
 
 
