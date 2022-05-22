@@ -160,6 +160,8 @@ int a=3,b=2;
 
 主调函数：
 
+{: file='main.cpp'}
+
 ``` c++
 #include<cstdio>
 using namespace std;
@@ -174,6 +176,8 @@ int main(){
 
 被调函数：
 
+{: file='extern.cpp'}
+
 ``` c++
 #include<cstdio>
 using namespace std;
@@ -182,5 +186,5 @@ int f(int n){
 }
 ```
 
-{: file='extern.cpp'}
+
 
