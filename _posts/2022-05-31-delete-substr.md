@@ -60,7 +60,7 @@ char s2[1001];
 
 int main(){
     gets(s1);
-    gets(s2);A
+    gets(s2);
     char *p; // 用于接收strstr()传递的地址
     while((p=strstr(s1,s2))!=NULL){ // 即存在子串
         /*
