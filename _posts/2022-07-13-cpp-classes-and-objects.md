@@ -35,7 +35,10 @@ There are two types of class members:
 
 We *encapsulate*（封装） — or enclose for simpler user access — attributes and methods in a class like this:
 
-```C++
+
+
+```c++
+
 class City {
  
   // attribute
@@ -49,6 +52,7 @@ public:
   }
  
 };
+
 ```
 
 {: file='city.hpp'}
@@ -57,7 +61,10 @@ Unless we have a mostly empty class, it’s common to split function declaration
 
 How can we define methods outside a class? We can do this using `ClassName::` before the method name to indicate its class like this:
 
-```C++
+
+
+```c++
+
 int City::get_population() {
   return population;
 }
@@ -101,7 +108,10 @@ error: 'population' is a private member of 'City'
 
 But sometimes you need access to class members, and for that, there is `public`. You can use it to make everything below accessible outside the class:
 
-```C++
+
+
+```c++
+
 class City {
  
   int population; 
@@ -118,7 +128,9 @@ public: // stuff below is public
 
 There is also a `private` access modifier for when you want something below `public` to be private to the class:
 
-```C++
+
+
+```c++
 class City {
  
   int population; 
@@ -158,6 +170,8 @@ public:
 
 {: file='city.hpp'}
 
+
+
 ```C++
 City::City(std::string new_name, int new_pop)
   // members get initialized to values passed in 
@@ -165,6 +179,8 @@ City::City(std::string new_name, int new_pop)
 ```
 
 {: file='city.cpp'}
+
+
 
 You could also write the definition like this:
 
@@ -194,9 +210,11 @@ Now we have a `City` called `ankara` with the following attributes:
 
 ## Destructors
 
-A *destructor* is a special method that handles object destruction. Like a constructor, it has the same name as the class and no return type, but is preceded by a `~` operator and takes no parameters:
+A *destructor*（析构函数） is a special method that handles object destruction. Like a constructor, it has the same name as the class and no return type, but is preceded by a `~` operator and takes no parameters:
 
-```C++
+
+
+```c++
 class City {
  
   std::string name;
