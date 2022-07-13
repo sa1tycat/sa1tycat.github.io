@@ -65,6 +65,8 @@ int main() {
 
 {: file='main.cpp'}
 
+
+
 ```c++
 
 std::string say_hi(std::string name); // function declaration
@@ -73,15 +75,14 @@ std::string say_hi(std::string name); // function declaration
 
 {: file='functions.hpp'}
 
+
+
 ```C++
 #include <string>
 #include "functions.hpp" 
  
-// function defintion
-std::string say_hi(std::string name) {
- 
+std::string say_hi(std::string name) { // function defintion
   return "Hey there, " + name + "!\n";
- 
 }
 ```
 
