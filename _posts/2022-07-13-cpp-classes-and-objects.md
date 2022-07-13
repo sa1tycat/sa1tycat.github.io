@@ -188,8 +188,9 @@ public:
  
 };
 ```
-
 {: file='city.hpp'}
+
+
 
 
 
@@ -198,7 +199,6 @@ City::City(std::string new_name, int new_pop)
   // members get initialized to values passed in 
   : name(new_name), population(new_pop) {}
 ```
-
 {: file='city.cpp'}
 
 
@@ -213,7 +213,6 @@ City::City(std::string new_name, int new_pop) {
   population = new_pop;
 }
 ```
-
 {: file='city.cpp'}
 
 
