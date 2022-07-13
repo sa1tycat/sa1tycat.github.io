@@ -92,7 +92,7 @@ when compiling this 3 files in a bash, you need to tell g++ all of the files you
 
 ## Inline Functions
 
- *inline function* is a function definition, usually in a header file, qualified by `inline` like this:
+ *inline function* （内联函数）is a function definition, usually in a header file, qualified by `inline` like this:
 
 ```c++
 inline 
@@ -138,9 +138,9 @@ In example above, if we call the functions by `intro("Bob")`(leaving the argumen
 
 ALWAYS put the default arguments in the last place.
 
-## Function Overload
+## Function Overloading
 
-In a process known as *function overloading*, you can give multiple C++ functions the same name. Just make sure at least one of these conditions is true:
+In a process known as *function overloading*（函数重载）, you can give multiple C++ functions the same name. Just make sure at least one of these conditions is true:
 
 - Each has different type parameters.
 - Each has a different number of parameters.
