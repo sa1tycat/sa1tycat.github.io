@@ -18,6 +18,8 @@ The class（类） serves as a blueprint for *objects*（对象）, which are in
 
 We can create an empty C++ class like this in a header file:
 
+
+
 ```C++
 class City {
  
@@ -25,6 +27,8 @@ class City {
 ```
 
 {: file='city.hpp'}
+
+
 
 Components of a class are called *class members*（成员）. Just like you can get a string’s length using `.length()`, you can access class members using the dot operator (`object.class_member`).
 
@@ -38,7 +42,6 @@ We *encapsulate*（封装） — or enclose for simpler user access — attribut
 
 
 ```c++
-
 class City {
  
   // attribute
@@ -57,6 +60,8 @@ public:
 
 {: file='city.hpp'}
 
+
+
 Unless we have a mostly empty class, it’s common to split function declarations from definitions. We declare methods inside the class (in a header), then define the methods outside the class (in a **.cpp** file of the same name).
 
 How can we define methods outside a class? We can do this using `ClassName::` before the method name to indicate its class like this:
@@ -64,13 +69,14 @@ How can we define methods outside a class? We can do this using `ClassName::` be
 
 
 ```c++
-
 int City::get_population() {
   return population;
 }
 ```
 
 {: file='city.cpp'}
+
+
 
 Unlike with regular functions, **we need to `include` the header file** in the **.cpp** file where we define the methods.
 
@@ -80,17 +86,27 @@ An object is an instance of a class, which encapsulates data and functionality p
 
 To create (or instantiate) an object, we can do this:
 
+
+
 ```c++
 City accra;
 ```
 
+
+
 We can give the object’s attributes values like this (note that these must be attributes you defined in the class and it should be in public):
+
+
 
 ```C++
 accra.population = 2270000;
 ```
 
+
+
 Later, we can access this information using the method we added to the `City` class (if it’s in a `public` part of the class):
+
+
 
 ```C++
 accra.get_population();
@@ -111,7 +127,6 @@ But sometimes you need access to class members, and for that, there is `public`.
 
 
 ```c++
-
 class City {
  
   int population; 
@@ -125,6 +140,8 @@ public: // stuff below is public
 ```
 
 {: file='city.hpp'}
+
+
 
 There is also a `private` access modifier for when you want something below `public` to be private to the class:
 
@@ -148,11 +165,15 @@ private: // this stuff is private
 
 {: file='city.hpp'}
 
+
+
 ## Constructors
 
 A *constructor*（构造函数） is a special kind of method that lets you decide how the objects of a class get created. It has the same name as the class and no return type. Constructors really shine when you want to instantiate an object with specific attributes.
 
 If we want to make sure each `City` is created with a name and a population, we can use parameters and a member initializer list to initialize attributes to values passed in:
+
+
 
 ```c++
 #include "city.hpp"
@@ -184,6 +205,8 @@ City::City(std::string new_name, int new_pop)
 
 You could also write the definition like this:
 
+
+
 ```C++
 City::City(std::string new_name, int new_pop) {
   name = new_name;
@@ -193,15 +216,21 @@ City::City(std::string new_name, int new_pop) {
 
 {: file='city.cpp'}
 
+
+
 However, a member initialization list allows you to directly initialize each member when it gets created.
 
 To instantiate an object with attributes, you can do:
+
+
 
 ```C++
 City ankara("Ankara", 5445000);
 ```
 
 {: file='main.cpp'}
+
+
 
 Now we have a `City` called `ankara` with the following attributes:
 
@@ -234,6 +263,8 @@ City::~City() {
 ```
 
 {: file='city.hpp'}
+
+
 
 Inside, you add any housekeeping that needs to happen before the object is destroyed. You generally won’t need to call a destructor; the destructor will be called automatically in any of the following scenarios:
 
