@@ -1,5 +1,5 @@
 ---
-title: C++之vector
+title: C++之循环新特性(C++11)
 author: saltycat
 date: 2022-07-13 20:47:59 +0800
 categories: [C++]
@@ -67,3 +67,37 @@ for (int i : vec )
 ```
 
 In this case, the elements in vec are modified into `{2, 3}` respectively.
+
+## for-each Loops
+
+The `for-each` loop is especially useful for iterating through list-like structures such as arrays or `std::vector`. Although regular `for` loops are perfectly capable of this task, `for-each` loops provides a more convenient syntax:
+
+```c++
+int fibonacci[5] = {0, 1, 1, 2, 3};
+for (int number : fibonacci) {
+  std::cout << number;
+}
+```
+
+The output of the above example is:
+
+```
+01123
+```
+
+This `for-each` loop iterates through an array called `fibonacci` using the counter variable `number`.
+
+## The auto Keyword
+
+When iterating through an array using the `for-each` loop, the counter variable may be declared using the `auto` keyword.
+
+`auto` lets C++ deduce the type of the variable based on the type of the list it belongs to.
+
+Here is the previous example written using `auto`:
+
+```C++
+int fibonacci[5] = {0, 1, 1, 2, 3};
+for (auto number : fibonacci) {
+  std::cout << number;
+}
+```
