@@ -40,7 +40,7 @@ Previously, when we passed parameters to a function, we used normal variables an
 This allows us to:
 
 - Modify the value of the function arguments.
-- Avoid making copies of a variable/object for performance reasons.
+- **Avoid making copies of a variable/object for performance reasons.**
 
 The following code shows an example of pass-by-reference. The reference parameters are initialized with the actual arguments when the function is called:
 
