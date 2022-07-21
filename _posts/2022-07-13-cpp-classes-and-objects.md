@@ -521,7 +521,7 @@ City::~City() {
 ```c++
 City::~City() {
  
-  // any final cleanup
+  // any final cleanup or simply nothing
  
 }
 ```
@@ -538,7 +538,52 @@ Inside, you add any housekeeping that needs to happen before the object is destr
 
 It is worth noticing that a destructor cannot manually be called (the compiler will automatically call it when it needs), and if you didn't create a destructor, the compiler will create one itself.
 
-# Inheritance
+
+
+## `const` Member Functions
+
+Considering the following code:
+
+```c++
+class Point {
+private:
+  double x;
+  double y;
+
+public:
+  Point(double new_x = 0.0, double new_y = 0.0);
+  void Show();
+}
+
+int main() {
+  const Point a(1,1);
+  a.Show();
+  return 0;
+}
+
+Point::Point(double new_x, double new_y)
+ : x(new_x), y(new_y)) {}
+
+void Point::Show() const {
+  cout << "x: " << x << "\ny: " << y << "\nlength" << length;
+}
+```
+
+With current C++, the compiler should object to `a.Show();`. Because the invoking object is `const`, however, the invoked function doesn't offer any guarantee to not alter the object. We could solve this problem by passing a `const` reference as an argument. But there is no argument in this function. Thus we introduce a new syntax to solve such problems, a `const` function:
+
+```c++
+void Show() const; // declaration
+
+void Point::Show() const { // definition
+    
+}
+```
+
+Just as you should use `const` references and pointers as formal function arguments whenever appropriate, you should make class methods `const` whenever they don’t modify the invoking object.
+
+
+
+## Inheritance
 
 In C++, *inheritance*（继承） is the concept of defining a class in terms of another class. Inheritance makes it possible to reuse code and to establish hierarchical（等级制） relationships between classes.
 
@@ -692,7 +737,7 @@ The following table is a reminder of the three access specifiers in C++:
 | Inside derived classes | yes      | yes         | no        |
 | Outside the class      | yes      | no          | no        |
 
-# Polymorphism
+## Polymorphism
 
 The term *polymorphism*（多态） means “many forms”. In C++, polymorphism applies to class methods in an inheritance relationship.
 
