@@ -581,6 +581,44 @@ void Point::Show() const { // definition
 
 Just as you should use `const` references and pointers as formal function arguments whenever appropriate, you should make class methods `const` whenever they don’t modify the invoking object.
 
+##  The `this` Pointer
+
+Suppose that we have a member function of the `Point` class to return an object who holds a larger length between two.
+
+It probably should have a prototype like this: (this is not a correct version!!!)
+
+```c++
+Point Larger(const Point &t) const;
+```
+
+whose function return an object. However in this case, we use a `const` reference as an argument. Thus it should return a type that matches it. So the prototype should be altered to this:(this one is correct!!!)
+
+```c++
+const Point & Larger(const Point &t) const;
+```
+
+Now we are able to return a `const` reference of `t` (an object accessed explicitly because it is passed as an function argument), however we cannot return a reference of the invoking object, which is accessed implicitly.
+
+Therefore, there's the `this` pointer, a pointer who points to the invoking object.
+
+With `this`, we are able to write the implementation:
+
+```c++
+const Point & Point::Larger(const Point &t) const {
+  if (t.length > length)
+    return t;
+  return *this;
+}
+```
+
+![this points to the invoking object.](/assets/blog_res/2022-07-13-cpp-classes-and-objects.assets/image-20220722113001212.png)
+
+Basically, `this` is passed as a hidden argument to the method. Thus, the function call `stock1.topval(stock2)` sets `this` to the address of the `stock1` object and makes that pointer available to the `topval()` method. Similarly, the function call `stock2.topval(stock1)` sets `this` to the address of the `stock2` object. In general, all class methods have a `this` pointer set to the address of the object that invokes the method. Indeed, `total_val` in `topval()` is just shorthand notation for `this->total_val`. 
+
+>**Note**
+>
+>Each member function, including constructors and destructors, has a `this`pointer. The special property of the `this`pointer is that it points to the invoking object. If a method needs to refer to the invoking object as a whole, it can use the expression `*this`. Using the `const`qualifier after the function argument parentheses qualifies `this` as being a pointer to `const`; in that case, you can’t use `this` to change the object’s value.
+
 
 
 ## Inheritance
