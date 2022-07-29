@@ -464,7 +464,7 @@ Similar to `colspan`, the `rowspan` attribute on a table header or table data el
 
 The table body element, `<tbody>`, is a semantic element that will contain all table data other than table heading and table footer content. If used, `<tbody>` will contain all table row `<tr>` elements, and indicates that `<tr>` elements make up the body of the table. `<table>` cannot have both `<tbody>` and `<tr>` as direct children.
 
-```
+```html
 <table>
  <tbody>
    <tr>
