@@ -109,14 +109,18 @@ $$
 
 简而言之，就是将指数 $n$，转化成二进制形式 $(n_tn_{t-1}\cdots n_1n_0)_2$，从右到左依次编号为 0，1，...，t。对于其中任意第 k 位，若 $n_k=1$，则需要相乘 $a^{2^k}$。
 
-即抽离出公式
+即抽离出公式：
+
+
 $$
 \begin{aligned}
 a^n & = (a^{n_t 2^t + \cdots + n_0 2^0})\\\\
 & = a^{n_0 2^0} \times a^{n_1 2^1}\times \cdots \times a^{n_t2^t}
 \end{aligned}
 $$
-$n_k=1$ 的部分。
+
+
+中 $n_k=1$ 的部分。
 
 ```c++
 long long power(int a, int n) {
