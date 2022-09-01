@@ -140,31 +140,31 @@ $$
 $$
 
 $$
-\sum _{{i=1}}^{{n}}i^{{3}}={\frac  {1}{4}}n^{4}+{\frac  {1}{2}}n^{3}+{\frac  {1}{4}}n^{2}=\mathcal{O}(n^{4})
+\sum _{i=1}^{n}i^{{3}}={\frac  {1}{4}}n^{4}+{\frac  {1}{2}}n^{3}+{\frac  {1}{4}}n^{2}=\mathcal{O}(n^{4})
 $$
 
 $$
-\sum _{{i=1}}^{{n}}i^{{4}}={\frac  {1}{5}}n^{5}+{\frac  {1}{2}}n^{4}+{\frac  {1}{3}}n^{3}-{\frac  {1}{30}}n=\mathcal{O}(n^{5})
+\sum _{i=1}^{n}i^{{4}}={\frac  {1}{5}}n^{5}+{\frac  {1}{2}}n^{4}+{\frac  {1}{3}}n^{3}-{\frac  {1}{30}}n=\mathcal{O}(n^{5})
 $$
 
 $$
-\sum _{{i=0}}^{{n}}i^{{k}}\approx \int_{0}^{n} x^k\, dx=\mathcal{O}(n^{k+1})
+\sum _{i=0}^{n}i^{{k}}\approx \int_{0}^{n} x^k\, dx=\mathcal{O}(n^{k+1})
 $$
 
 - 几何级数
 
 $$
-\sum _{{i=0}}^{{n}}a^{{k}}=\frac{a^{n+1}-1}{a-1} =\mathcal{O}(a^{n})\;(a>1)
+\sum _{i=0}^{n}a^{{k}}=\frac{a^{n+1}-1}{a-1} =\mathcal{O}(a^{n})\;(a>1)
 $$
 
 - 收敛级数
 
 $$
-\sum _{{i=2}}^{{n}}\frac{1}{i\cdot(i-1)}=1-\frac{1}{n} =\mathcal{O}(1)
+\sum _{i=2}^{n}\frac{1}{i\cdot(i-1)}=1-\frac{1}{n} =\mathcal{O}(1)
 $$
 
 $$
-\sum _{{i=1}}^{{n}}\frac{1}{i^2}=\frac{\pi^2}{6} =\mathcal{O}(1)
+\sum _{i=1}^{n}\frac{1}{i^2}=\frac{\pi^2}{6} =\mathcal{O}(1)
 $$
 
 $$
