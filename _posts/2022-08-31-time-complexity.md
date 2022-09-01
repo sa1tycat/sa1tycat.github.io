@@ -47,7 +47,7 @@ $T(n)$ 介于 $\Omega(g(n))$与 $\mathcal{O}(f(n))$ 之间。若恰巧出现 $g(
 
 大 Θ 记号是对算法复杂度的准确估计，对于规模为 $n$ 的任何输入，算法的运行时间 $T(n)$ 都与 $\Theta(h(n))$ 同阶。
 
-![大O记号、大Ω记号和大Θ记号](/../sa1tycat.github.io/assets/blog_res/2022-08-31-time-complexity.assets/image-20220831203614023.png)
+![大O记号、大Ω记号和大Θ记号](/assets/blog_res/2022-08-31-time-complexity.assets/image-20220831203614023.png)
 
 由于大 Θ 记号的条件较强，故在某些情况下，可能无法找到这个紧贴的 $h(n)$，因此多数情况下我们都直接使用 $\mathcal{O}$ 来描述一个算法的时间复杂度。
 
@@ -121,7 +121,7 @@ $T(n) = \mathcal{O}(\Phi^{n+1}) = \mathcal{O}(2^n)$
 
 由于指数增量过大，很难在实际中有效解决问题，因此指数级的“算法”也被称作难解（intractable）问题。
 
-![常见函数增长模型](/../sa1tycat.github.io/assets/blog_res/2022-08-31-time-complexity.assets/image-20220901160341309.png)
+![常见函数增长模型](/assets/blog_res/2022-08-31-time-complexity.assets/image-20220901160341309.png)
 
 
 
