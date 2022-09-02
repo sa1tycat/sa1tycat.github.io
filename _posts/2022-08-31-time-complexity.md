@@ -204,5 +204,52 @@ $$
 
 ### 实例
 
+#### 实例一
 
+```c++
+for (int i = 0; i < n; i++)
+  for (int j = 0; j < i * i; j++)
+    for (int k = 0; k < j; k++) 
+      sum++;
+
+```
+
+可以看到是很平凡的循环，基本操作为 `sum++;`，显然有：
+$$
+\begin{aligned}
+T(n) & = \sum_{i\,=\,0}^{n\,-\,1}\,\sum_{j\,=\,0}^{i^2}\,\sum_{k\,=\,0}^{j\,-\,1}\,1 \\\\
+& = \sum_{i\,=\,0}^{n\,-\,1}\,\sum_{j\,=\,0}^{i^2}\,j\\\\
+& = \sum_{i\,=\,0}^{n\,-\,1}\,(0+1+2+\dots+i^2)\\\\
+& = \sum_{i\,=\,0}^{n\,-\,1}\,\frac{i^2\cdot(i^2+1)}{2}\\\\
+& = \mathcal{O}(n^5)
+\end{aligned}
+$$
+
+#### 实例二
+
+```c++
+for (int i = 0; i < n; i++) 
+  for (int j = 0; j < i * i; j++) 
+    if (j % i == 0)
+      for (int k = 0; k < j; k++) 
+        sum++;
+```
+
+只有在 `j` 能够被 `i` 整除的时候才会进行基本操作 `sum++`，上述循环等价于：
+
+```c++
+for (int i = 0; i < n; i++) 
+  for (int r = 0; r < i; j++) 
+    for (int k = 0; k < r * i; k++) 
+      sum++;
+```
+
+$$
+\begin{aligned}
+T(n) & = \sum_{i\,=\,0}^{n\,-\,1}\,\sum_{r\,=\,0}^{i\,-\,1}\,\sum_{k\,=\,0}^{r\cdot i\,-\,1}\,1 \\\\
+& = \sum_{i\,=\,0}^{n\,-\,1}\,\sum_{r\,=\,0}^{i\,-\,1}\,r\cdot i   \\\\
+& = \sum_{i\,=\,0}^{n\,-\,1}\, i\cdot \frac{i\cdot(i-1)}{2}   \\\\
+& = \mathcal{O}(n^4)
+\end{aligned}
+$$
 
