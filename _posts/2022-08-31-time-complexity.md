@@ -306,7 +306,7 @@ $$
 
 
 
-如，求 $T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+4n & n>1 \end{matrix}\right.$ 的时间复杂度。
+如，求 $$T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+4n & n>1 \end{matrix}\right.$$ 的时间复杂度。
 
 可知 $a=b=2$，
 
@@ -318,7 +318,7 @@ $$
 
 
 
-又如，求 $T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+n\log n & n>1 \end{matrix}\right.$ 的时间复杂度。
+又如，求 $$T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+n\log n & n>1 \end{matrix}\right.$$ 的时间复杂度。
 
 可知 $a=b=2$，
 
