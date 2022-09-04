@@ -189,7 +189,7 @@ $$
 \sum_{k=1}^n\,\ln k \;=\Theta(n\log n)
 $$
 
-- -90线性对数
+- 线性对数
   $$
   \sum_{k=1}^n\,k\cdot \log k \;\approx\int_1^nx\ln x\,dx=\mathcal{O}(n^2\log n)
   $$
@@ -230,7 +230,13 @@ $$
 
 ##### 展开法
 
-例如，递推式 $ T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+4n^2 & n>1 \end{matrix}\right.$  的时间复杂度为
+例如，递推式
+$$
+T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+4n^2 & n>1 \end{matrix}\right.
+$$
+的时间复杂度为
+
+
 $$
 \begin{aligned}
 T(n) & = 2\,T(n/2)+5n^2 \\
@@ -254,6 +260,7 @@ int sum(int a[], int n) {
 ```
 
 可以画出递归图：
+
 ![递归图1](/assets/blog_res/2022-08-31-time-complexity.assets/image-20220904095915919.png)
 
 每一个递归实例的时间复杂度为 $\mathcal{O}(1)$，故算法的整体时间复杂度为 $\mathcal{O}(1)\times\mathcal{O}(n+1)=\mathcal{O}(n)$
@@ -270,9 +277,13 @@ int sum(int A[], int lo, int hi) {
 
 画出递归图：
 
+
+
 ![递归图2](/assets/blog_res/2022-08-31-time-complexity.assets/image-20220904100450877.png)
 
 每一个递归实例的复杂度均为 $\mathcal{O}(1)$，只需统计出递归实例的个数即可，可以看到第一层有 $2^0$ 个，第二层有 $2^1$个，...，一共有 $\lceil \log n \rceil$ 层，即最后一层的个数为 $2^{\log n}$ 个，故最后总数为 $2^0+2^1+\dots+2^{\log n}$，也就是说：
+
+
 $$
 \begin{align} 
 T(n) & = \mathcal{O}(1) \times \mathcal{O}(2^0+2^1+\dots+2^{\log n})\\
@@ -295,7 +306,7 @@ $$
 
 
 
-如，求 $ T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+4n & n>1 \end{matrix}\right.$ 的时间复杂度。
+如，求 $T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+4n & n>1 \end{matrix}\right.$ 的时间复杂度。
 
 可知 $a=b=2$，
 
@@ -307,7 +318,7 @@ $$
 
 
 
-又如，求 $ T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+n\log n & n>1 \end{matrix}\right.$ 的时间复杂度。
+又如，求 $T(n)=\left\{\begin{matrix} 1 & n=1\\ 2\,T(n/2)+n\log n & n>1 \end{matrix}\right.$ 的时间复杂度。
 
 可知 $a=b=2$，
 
@@ -332,6 +343,8 @@ for (int i = 0; i < n; i++)
 ```
 
 可以看到是很平凡的循环，基本操作为 `sum++;`，显然有：
+
+
 $$
 \begin{aligned}
 T(n) & = \sum_{i\,=\,0}^{n\,-\,1}\,\sum_{j\,=\,0}^{i^2}\,\sum_{k\,=\,0}^{j\,-\,1}\,1 \\\\
@@ -360,6 +373,9 @@ for (int i = 0; i < n; i++)
     for (int k = 0; k < r * i; k++) 
       sum++;
 ```
+
+
+
 
 $$
 \begin{aligned}
