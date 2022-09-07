@@ -148,7 +148,7 @@ $$
 $$
 
 $$
-\sum _{i=0}^{n}i^{{k}}\approx \int_{0}^{n} x^k\, dx=\mathcal{O}(n^{k+1})
+\sum _{i=0}^{n}i^{k}\approx \int_{0}^{n} x^k\, dx=\mathcal{O}(n^{k+1})
 $$
 
 - 几何级数
