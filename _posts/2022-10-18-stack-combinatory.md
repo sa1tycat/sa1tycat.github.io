@@ -13,3 +13,4 @@ typora-root-url: ../../sa1tycat.github.ioyu
 
 
 ![image-20221018204628374](/assets/blog_res/2022-10-18-stack-combinatory.assets/image-20221018204628374.png)
+
